@@ -102,6 +102,14 @@ ion-icon {
   padding: 1.4rem 3.2rem 1rem 3.2rem;
   font-family: var(--main-font-family-medium);
 }
+.btn-windows-1 {
+  background-color: var(--off-white-clr);
+  text-align: center;
+  font-size: 2rem;
+  color: var(--dark-clr);
+  padding: 1.4rem 3.2rem 1rem 3.2rem;
+  font-family: var(--main-font-family-medium);
+}
 
 .btn-login {
   background-color: var(--off-white-clr);
@@ -166,9 +174,8 @@ ion-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
-  padding-top: 2rem;
   z-index: 20;
+  height: 15vh;
 }
 
 .logo {
@@ -378,8 +385,8 @@ ion-icon {
   padding: 0.8rem;
 }
 
-.footer_list-item:hover {
-  border-bottom: 1px solid black;
+.footer_list-item a:hover {
+  border-bottom: 1.5px solid rgb(5, 5, 5);
 }
 
 .footer_list-item a {
@@ -455,6 +462,210 @@ ion-icon {
 
 .wave-inverted {
   transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+@media screen and (max-width: 62.5em) {
+  html {
+    font-size: 55%;
+  }
+  .hero {
+    background-position: left;
+  }
+
+  .hero_body {
+    width: 65%;
+    top: 55%;
+    left: 33%;
+    text-align: left;
+    /* transform: translate(-50%, -50%); */
+  }
+  .hero_body-heading {
+    text-align: left;
+    margin-left: 4rem;
+  }
+
+  .hero_body-content {
+    width: 85%;
+    margin: 2.5rem auto;
+    text-align: left;
+  }
+
+  .hero_body-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3rem;
+  }
+
+  .btn-downloads {
+    display: block;
+    text-align: left;
+    margin-left: 0rem;
+    margin-top: 2rem;
+  }
+
+  .btn-windows {
+    display: block;
+    text-align: left;
+  }
+
+  .hamburger_menu {
+    display: flex;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2.5rem;
+  }
+
+  .open {
+    font-size: 4rem;
+    color: #fafafa;
+    vertical-align: middle;
+  }
+  .close {
+    font-size: 4rem;
+    color: #af0303;
+    vertical-align: middle;
+    display: none;
+  }
+  .footer-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 8rem auto auto 8rem;
+  }
+
+  .footer_list-item a {
+    font-size: 2rem;
+  }
+
+  .place {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    margin-left: 6rem;
+    color: #fafafa;
+    font-size: 2rem;
+  }
+
+  .product {
+    grid-column: 4 / span 5;
+    grid-row: 2;
+    margin-bottom: 4rem;
+  }
+
+  .company {
+    grid-column: 6;
+    grid-row: 2;
+    margin-bottom: 4rem;
+  }
+
+  .resources {
+    grid-column: 4 / span 5;
+    grid-row: 3;
+  }
+
+  .policies {
+    grid-column: 6;
+    grid-row: 3;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .hero_body {
+    width: 80%;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero {
+    background-position: right bottom;
+  }
+
+  .hero_body-links {
+    margin-left: 4.2rem;
+  }
+
+  .hero_body-heading {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero_body-content {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-left: 5rem;
+  }
+  .grid_picture {
+    grid-column: 2 / span 11;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+
+  .grid_picture-1 {
+    grid-column: 2 / span 11;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+
+  .grid_content {
+    grid-column: 2 / span 11;
+    width: 85%;
+    margin-bottom: 10rem;
+  }
+
+  .grid_content-1 {
+    grid-column: 2 / span 11;
+    width: 85%;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 31.875em) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 7rem auto auto auto 4rem;
+  }
+
+  .place {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+
+  .product {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    margin-left: 5rem;
+  }
+
+  .company {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    margin-left: 5rem;
+  }
+
+  .resources {
+    grid-column: 1 / 2;
+    grid-row: 4;
+    margin-left: 5rem;
+  }
+
+  .policies {
+    grid-column: 2 / 3;
+    grid-row: 4;
+    margin-left: 5rem;
+  }
+
+  .hero {
+    background-position: center;
+  }
 }
 /*@keyframes wave-animation {*/
 /*    0% {*/
