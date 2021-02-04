@@ -637,6 +637,7 @@ ion-icon {
   .place {
     grid-column: 1 / span 3;
     grid-row: 2;
+    margin-bottom: 5rem;
   }
 
   .product {
@@ -665,6 +666,16 @@ ion-icon {
 
   .hero {
     background-position: center;
+  }
+  .reliable_button-heading {
+    margin-bottom: 4rem;
+  }
+
+  .btn-last {
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    margin: 0rem;
   }
 }
 /*@keyframes wave-animation {*/
