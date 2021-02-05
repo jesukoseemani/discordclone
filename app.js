@@ -5,11 +5,11 @@ function scroll(){
 
 controller = new ScrollMagic.Controller();
 
-const t1 = gsap.timeline({defaults: {duration: 1, ease: "power2.inOut"}});
+const t1 = gsap.timeline({defaults: {duration: 0.5, ease: "power2.inOut"}});
  t1.fromTo(".invite", {opacity:0, y:"50%" }, {opacity:1, y: "0%"});
 
 gridscene = new ScrollMagic.Scene({
-  triggerElement: ".hero_body-links",
+  triggerElement: ".hero_body-content",
   triggerHook: 0,
   // reverse: false
   

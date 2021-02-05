@@ -68,6 +68,7 @@ section {
 .hamburger_menu {
   display: none;
 }
+
 ion-icon {
   margin-right: 0.7rem;
   font-size: 2.1rem;
@@ -165,9 +166,24 @@ ion-icon {
 }
 /* the hero Section */
 .hero {
-  background: url("./assets/images/discord.svg") no-repeat center/cover;
+  /* background: url("./assets/images/discord.svg") no-repeat center/cover; */
   min-height: 100vh;
   position: relative;
+}
+
+.headsvg {
+  max-width: 135rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.headsvg svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
 }
 
 .hero_head {
@@ -176,6 +192,9 @@ ion-icon {
   align-items: center;
   z-index: 20;
   height: 15vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -224,7 +243,7 @@ ion-icon {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--off-white-clr);
-  z-index: 20;
+  z-index: 2;
 }
 
 .hero_body-heading {
@@ -471,7 +490,14 @@ ion-icon {
   html {
     font-size: 55%;
   }
+  .headsvg {
+    display: none;
+  }
+
   .hero {
+    background: url("./assets/images/Thephoto.svg") no-repeat center/cover;
+    min-height: 100vh;
+    position: relative;
     background-position: left;
   }
 
@@ -482,6 +508,7 @@ ion-icon {
     text-align: left;
     /* transform: translate(-50%, -50%); */
   }
+
   .hero_body-heading {
     text-align: left;
     margin-left: 4rem;
@@ -698,5 +725,63 @@ ion-icon {
     d: path(
       "M842.322034,38.0019829 C686.954825,71.1183168 623.386282,53.08497 467.492582,19.4422816 C313.032879,-13.8909426 84.0992497,8.02840272 0,44.7243294 L0,150.727527 L1920,150.727527 L1920,76.8685643 C1512.23604,-35.3595639 1568.70222,67.4289432 1278.62078,31.7541069 C988.539347,-3.92072949 997.689243,4.88564905 842.322034,38.0019829 Z"
     );
+  }
+}
+/* ANIMATION FOR THE IMAGE */
+
+#yacht {
+  animation: yacht 180s linear infinite;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+#balloon-3 {
+  animation: balloon1 60s linear infinite;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+#balloon-2 {
+  animation: balloon 60s linear infinite 1s;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+#balloon-1 {
+  animation: balloon2 60s linear infinite 1s;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+@keyframes yacht {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes balloon {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes balloon1 {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-75%, -75%);
+  }
+}
+@keyframes balloon2 {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(75%, -75%);
   }
 }
