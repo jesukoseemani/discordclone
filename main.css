@@ -172,7 +172,7 @@ ion-icon {
 }
 
 .headsvg {
-  max-width: 135rem;
+  width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
