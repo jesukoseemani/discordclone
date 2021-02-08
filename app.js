@@ -1,5 +1,42 @@
 
-let controller,gridscene,voiceScene
+let controller,gridscene,voiceScene 
+
+
+// TO OPEN
+const navbar = document.querySelector(".open");
+navbar.addEventListener("click", showNav);
+
+function showNav(e){
+const burger = document.querySelector(".burger");
+const body = document.querySelector("body");
+// burger.style.display = "flex";
+// burger.style.width = "40vw";
+body.style.overflowY = "hidden";
+
+//  gsap.fromTo(".burger", 0.1 , {display:"none", width:"0vw", ease: "linear" }, {display:"flex", width:"40vw"});
+
+ gsap.fromTo(".burger", 1, {display:"none", opacity:0, x:"100%" }, {display:"flex", opacity:1, x: "0%"});
+
+
+e.preventDefault();
+};
+
+// TO CLOSE
+const navbar_close = document.querySelector(".close");
+navbar_close.addEventListener("click", hideNav);
+
+function hideNav(e){
+const burger = document.querySelector(".burger");
+const body = document.querySelector("body");
+
+body.style.overflowY = "scroll";
+
+gsap.fromTo(".burger", 1, {display:"flex", opacity:1, x:"0%" }, {display:"none", opacity:0, x: "100%"});
+
+
+e.preventDefault();
+};
+
 
 function scroll(){
 

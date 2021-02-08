@@ -40,6 +40,8 @@ html {
 body {
   font-size: var(--general-font-size);
   font-family: var(--main-font-family-light);
+  position: relative;
+  overflow-x: hidden;
 }
 
 a {
@@ -209,6 +211,10 @@ ion-icon {
 
 .navbar {
   margin-left: -10rem;
+}
+
+.burger {
+  display: none;
 }
 
 .navbar_list {
@@ -547,6 +553,80 @@ ion-icon {
     display: none;
   }
 
+  .burger {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 40vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .menu-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lines {
+    border-bottom: 1px solid rgb(230, 228, 228);
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* .close {
+    color: #700505;
+  } */
+
+  /* .navigation-bar {
+  } */
+
+  .navigationbar_list {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    justify-content: flex-start;
+    margin: 0.5rem 0rem 0rem 2.5rem;
+  }
+
+  .navigationbar_list-item {
+    margin: 0.8rem 0rem;
+    padding: 0.4rem 0rem 0.4rem 2rem;
+  }
+
+  .navigationbar_list-item a {
+    color: #333;
+    font-size: 1.7rem;
+    font-family: var(--main-font-family-medium);
+  }
+
+  .navigationbar_list-item a:focus {
+    color: var(--brand-clr);
+    font-family: var(--main-font-family-medium);
+    font-weight: 500;
+  }
+
+  .navigationbar_list-item.navigationbar_list-item a:focus {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    background-color: rgba(221, 221, 221, 0.8);
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .navigation_button {
+    margin: 3rem;
+  }
+
+  .navigation_button a {
+    background-color: var(--brand-clr);
+    color: var(--light-clr);
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
   .login {
     display: flex;
     justify-content: center;
@@ -558,13 +638,17 @@ ion-icon {
     font-size: 4rem;
     color: #fafafa;
     vertical-align: middle;
+    display: flex;
   }
+
   .close {
-    font-size: 4rem;
-    color: #af0303;
+    font-size: 3rem;
+    color: black;
     vertical-align: middle;
-    display: none;
+    display: flex;
+    padding-right: 2rem;
   }
+
   .footer-container {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 8rem auto auto 8rem;
@@ -621,6 +705,18 @@ ion-icon {
     margin-left: 4.2rem;
   }
 
+  .burger {
+    width: 65vw;
+  }
+
+  .navigationbar_list {
+    width: 60vw;
+  }
+
+  .navigationbar_list-item a {
+    font-size: 2rem;
+  }
+
   .hero_body-heading {
     font-size: 4rem;
     margin-bottom: 2.5rem;
@@ -663,7 +759,12 @@ ion-icon {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 7rem auto auto auto 4rem;
   }
-
+  .burger {
+    width: 100vw;
+  }
+  .navigationbar_list {
+    width: 95vw;
+  }
   .place {
     grid-column: 1 / span 3;
     grid-row: 2;
